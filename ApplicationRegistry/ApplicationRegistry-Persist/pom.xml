@@ -8,9 +8,9 @@
 		<artifactId>ApplicationRegistry</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>uni.iit.miskolc.lukacs6</groupId>
+
 	<artifactId>ApplicationRegistry-Persist</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	
 	<name>ApplicationRegistry-Persist</name>
 	<url>http://maven.apache.org</url>
 	<properties>

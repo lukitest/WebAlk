@@ -7,9 +7,9 @@
     <artifactId>ApplicationRegistry</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>uni.iit.miskolc.lukacs6</groupId>
+  
   <artifactId>ApplicationRegistry-ServiceImpl</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+
   <name>ApplicationRegistry-ServiceImpl</name>
   <url>http://maven.apache.org</url>
   <properties>
