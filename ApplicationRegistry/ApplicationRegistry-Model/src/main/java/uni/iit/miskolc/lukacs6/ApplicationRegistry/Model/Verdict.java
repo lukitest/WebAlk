@@ -23,9 +23,6 @@ public class Verdict {
 	public void setVerdict(boolean verdict) {
 		this.verdict = verdict;
 	}
-
-	
-
 	
 
 }
