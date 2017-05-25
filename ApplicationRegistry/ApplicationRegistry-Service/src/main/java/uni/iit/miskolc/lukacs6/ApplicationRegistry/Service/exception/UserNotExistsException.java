@@ -1,13 +1,15 @@
 package uni.iit.miskolc.lukacs6.ApplicationRegistry.Service.exception;
 
-public class UserNotExistsException extends Exception{
+public class UserNotExistsException extends Exception {
 
-	private static final long serialVersionUID = 6709707037032527202L;
+	private static final long serialVersionUID = 82763492746L ;
+
 	public UserNotExistsException() {
 		super();
 	}
 
-	public UserNotExistsException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+	public UserNotExistsException(String message, Throwable cause, boolean enableSuppression,
+			boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 	}
 
