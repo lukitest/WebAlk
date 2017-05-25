@@ -1,27 +1,21 @@
 package uni.iit.miskolc.lukacs6.ApplicationRegistry.Model;
 
-public class Template {
+public enum Template {
+	DIRECTOR("DIRECTOR"),
+	DEPARTMENT("DEPARTMENT"),
+	RECTOR("RECTOR"),
+	LECTURER("LECTURER");
 
-	private String to;
-	private String msg;
-
-	public Template() {
+	private String value;
+	private Template(String destination) {
+		this.value = destination;
 	}
-
-	public String getTo() {
-		return to;
+	@Override
+	public String toString() {
+		return value;
 	}
-
-	public void setTo(String to) {
-		this.to = to;
-	}
-
-	public String getMsg() {
-		return msg;
-	}
-
-	public void setMsg(String msg) {
-		this.msg = msg;
+	public void setTemplate(String destination) {
+		this.value = destination;
 	}
 
 }
