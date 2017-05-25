@@ -3,7 +3,7 @@ package uni.iit.miskolc.lukacs6.ApplicationRegistry.Model;
 public class Verdict {
 
 	private Request request;
-	private String verdict;
+	private Boolean verdict;
 
 	public Verdict() {
 	}
@@ -16,12 +16,14 @@ public class Verdict {
 		this.request = request;
 	}
 
-	public String getVerdict() {
+	public Boolean getVerdict() {
 		return verdict;
 	}
 
-	public void setVerdict(String verdict) {
+	public void setVerdict(Boolean verdict) {
 		this.verdict = verdict;
 	}
+
+	
 
 }
