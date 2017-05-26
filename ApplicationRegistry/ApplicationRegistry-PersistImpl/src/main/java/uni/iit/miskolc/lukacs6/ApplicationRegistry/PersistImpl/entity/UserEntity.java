@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class UserEntity {
 
 	@Id
-	@Column(name = "Username")
+	@Column(name = "Neptuncode")
 	private String neptuncode;
 
 	@Column(name = "Password")

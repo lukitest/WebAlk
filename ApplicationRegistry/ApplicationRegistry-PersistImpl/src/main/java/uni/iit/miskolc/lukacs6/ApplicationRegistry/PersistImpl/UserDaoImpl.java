@@ -24,8 +24,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public User getUserByLoginDatas(String neptuncode) throws InvalidUserException {
-
+	public User getUserByUsername(String neptuncode) throws InvalidUserException {
 		UserEntity userEntity = this.entityManager.find(UserEntity.class, neptuncode);
 		User user = null;
 
@@ -44,10 +43,10 @@ public class UserDaoImpl implements UserDao {
 		UserEntity userEntity = this.entityManager.find(UserEntity.class, neptuncode);
 
 		if (userEntity != null) {
-			userEntity.setAge(age);
-			userEntity.setEmail(email);
 			userEntity.setFirstname(firstname);
 			userEntity.setLastname(lastname);
+			userEntity.setAge(age);
+			userEntity.setEmail(email);		
 
 			this.entityManager.merge(userEntity);
 		} else {
@@ -56,18 +55,6 @@ public class UserDaoImpl implements UserDao {
 
 	}
 
-	@Override
-	public User getUserByUsername(String neptuncode) throws InvalidUserException {
-		UserEntity userEntity = this.entityManager.find(UserEntity.class, neptuncode);
-		User user = null;
-
-		if (userEntity != null) {
-			user = UserEntityConverter.convertUserEntityToModel(userEntity);
-		} else {
-			throw new InvalidUserException();
-		}
-
-		return user;
-	}
+	
 
 }
