@@ -2,6 +2,7 @@ package uni.iit.miskolc.lukacs6.ApplicationRegistry.Model;
 
 public class Template {
 	
+
 	private String title;
 	private String value;
 	private String recipient;
