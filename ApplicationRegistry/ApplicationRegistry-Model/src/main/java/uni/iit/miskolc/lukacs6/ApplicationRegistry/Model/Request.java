@@ -6,8 +6,10 @@ public class Request {
 
 	private int id;
 	private Date date;
-	private Template template;
-
+	private String user;
+	private String reviewer;
+	
+	
 	public Request() {
 	}
 
@@ -27,12 +29,22 @@ public class Request {
 		this.date = date;
 	}
 
-	public Template getTemplate() {
-		return template;
+	public String getReviewer() {
+		return reviewer;
 	}
 
-	public void setTemplate(Template template) {
-		this.template = template;
+	public void setReviewer(String reviewer) {
+		this.reviewer = reviewer;
 	}
+
+	public String getUser() {
+		return user;
+	}
+
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+	
 
 }
