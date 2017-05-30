@@ -1,5 +1,4 @@
 package uni.iit.miskolc.lukacs6.ApplicationRegistry.ServiceImpl;
-
 import uni.iit.miskolc.lukacs6.ApplicationRegistry.Model.User;
 import uni.iit.miskolc.lukacs6.ApplicationRegistry.Service.UserService;
 import uni.iit.miskolc.lukacs6.ApplicationRegistry.Service.exception.UserNotExistsException;
@@ -17,18 +16,7 @@ public class UserServiceImpl implements UserService {
 	
 	public UserServiceImpl(){}
 	
-	@Override
-	public User getUserByLoginDatas(String neptuncode) throws UserNotExistsException {
-		User user = null;
 
-		try {
-			user = this.userDao.getUserByLoginDatas(neptuncode);
-		} catch (InvalidUserException e) {
-			throw new UserNotExistsException();
-		}
-
-		return user;
-	}
 
 	@Override
 	public void modifyUser(String neptuncode, String firstname, String lastname, int age, String email)

@@ -10,6 +10,5 @@ public interface UserDao {
 	
 	void modifyUser(String neptuncode, String firstname, String lastname, int age, String email) throws InvalidUserException;
 	
-
 	
 }

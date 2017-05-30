@@ -6,8 +6,9 @@ public class Request {
 
 	private int id;
 	private Date date;
-	private String user;
+	private User user;
 	private String reviewer;
+	private String comment;
 	
 	
 	public Request() {
@@ -37,11 +38,21 @@ public class Request {
 		this.reviewer = reviewer;
 	}
 
-	public String getUser() {
+	
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	public User getUser() {
 		return user;
 	}
 
-	public void setUser(String user) {
+	public void setUser(User user) {
 		this.user = user;
 	}
 

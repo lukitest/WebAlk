@@ -23,12 +23,7 @@ public class UserController {
 
 	}
 
-	@RequestMapping(value = "/getUserDetails", method = RequestMethod.GET)
-	public User getUserDetails() throws UserNotExistsException {
-		String neptuncode = getNeptuncode();
 
-		return this.userService.getUserByLoginDatas(neptuncode);
-	}
 
 	private String getNeptuncode() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
