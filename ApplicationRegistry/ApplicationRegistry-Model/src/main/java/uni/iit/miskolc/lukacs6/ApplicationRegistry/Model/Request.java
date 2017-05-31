@@ -9,6 +9,7 @@ public class Request {
 	private User user;
 	private String reviewer;
 	private String comment;
+	private Template template;
 	
 	
 	public Request() {
@@ -54,6 +55,14 @@ public class Request {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+	public Template getTemplate() {
+		return template;
+	}
+
+	public void setTemplate(Template template) {
+		this.template = template;
 	}
 
 	

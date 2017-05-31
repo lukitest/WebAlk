@@ -8,6 +8,7 @@ public class User {
 	private String lastname;
 	private int age;
 	private String email;
+	private boolean isTeacher;
 	private boolean enabled;
 	
 	public User(){
@@ -68,6 +69,14 @@ public class User {
 
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
+	}
+
+	public boolean isTeacher() {
+		return isTeacher;
+	}
+
+	public void setTeacher(boolean isTeacher) {
+		this.isTeacher = isTeacher;
 	}
 
 }
