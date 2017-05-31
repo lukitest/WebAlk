@@ -11,8 +11,9 @@ public interface RequestDao {
 	void submitRequest(Request request) throws InvalidRequestException;
 	List<Request> listRequestByUser(User user) throws InvalidUserException, InvalidRequestException;
 	
+
 	void addComment(Request request, String newComment) throws InvalidRequestException;
-	List<Request> listRequestByComment(User comment) throws  InvalidRequestException;
+	List<Request> listRequestByComment(String comment) throws  InvalidRequestException;
 
 	void makeVerdict(Request request, String verdict) throws InvalidRequestException;
 	void forwardRequest(User destinaionUser, Request request) throws InvalidRequestException, InvalidUserException;

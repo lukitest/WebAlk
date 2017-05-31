@@ -7,7 +7,7 @@ public class Request {
 	private int id;
 	private Date date;
 	private User user;
-	private String reviewer;
+	private String status;
 	private String comment;
 	private Template template;
 	private String verdict ;
@@ -32,13 +32,7 @@ public class Request {
 		this.date = date;
 	}
 
-	public String getReviewer() {
-		return reviewer;
-	}
-
-	public void setReviewer(String reviewer) {
-		this.reviewer = reviewer;
-	}
+	
 
 	
 
@@ -72,6 +66,14 @@ public class Request {
 
 	public void setVerdict(String verdict) {
 		this.verdict = verdict;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	
