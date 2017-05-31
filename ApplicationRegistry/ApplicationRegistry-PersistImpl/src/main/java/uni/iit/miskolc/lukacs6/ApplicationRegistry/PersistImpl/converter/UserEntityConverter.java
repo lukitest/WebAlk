@@ -16,6 +16,7 @@ public final class UserEntityConverter {
 		user.setLastname(userEntity.getLastname());
 		user.setNeptuncode(userEntity.getNeptuncode());
 		user.setPassword(userEntity.getPassword());
+		user.setTeacher(userEntity.isTeacher());
 		user.setEnabled(userEntity.isEnabled());
 
 		return user;
