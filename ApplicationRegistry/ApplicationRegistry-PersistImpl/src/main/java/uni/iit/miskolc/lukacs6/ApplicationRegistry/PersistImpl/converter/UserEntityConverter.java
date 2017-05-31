@@ -10,6 +10,8 @@ public final class UserEntityConverter {
 
 	public static User convertUserEntityToModel(UserEntity userEntity) {
 		User user = new User();
+		user.setNeptuncode(userEntity.getNeptuncode());
+		user.setPassword(userEntity.getPassword());
 		user.setAge(userEntity.getAge());
 		user.setEmail(userEntity.getEmail());
 		user.setFirstname(userEntity.getFirstname());
@@ -21,4 +23,21 @@ public final class UserEntityConverter {
 
 		return user;
 	}
+	public static UserEntity convertUserToEntity(User user) {
+		UserEntity userEntity = new UserEntity();
+		userEntity.setNeptuncode(user.getNeptuncode());
+		userEntity.setPassword(user.getPassword());
+		userEntity.setAge(user.getAge());
+		userEntity.setEmail(user.getEmail());
+		userEntity.setFirstname(user.getFirstname());
+		userEntity.setLastname(user.getLastname());
+		userEntity.setNeptuncode(user.getNeptuncode());
+		userEntity.setPassword(user.getPassword());
+		userEntity.setTeacher(user.isTeacher());
+		userEntity.setEnabled(user.isEnabled());
+
+		return userEntity;
+	}
+
+
 }
