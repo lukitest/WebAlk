@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity(name = "User")
 @Table(name = "Users")
 public class UserEntity {
@@ -29,13 +28,15 @@ public class UserEntity {
 	@Column(name = "Email")
 	private String email;
 
+	@Column(name = "isTeacher")
+	private boolean isTeacher;
+
 	@Column(name = "Enabled")
 	private boolean enabled;
-	
+
 	public UserEntity() {
-		
+
 	}
-	
 
 	public String getNeptuncode() {
 		return neptuncode;
@@ -85,6 +86,14 @@ public class UserEntity {
 		this.email = email;
 	}
 
+	public boolean isTeacher() {
+		return isTeacher;
+	}
+
+	public void setTeacher(boolean isTeacher) {
+		this.isTeacher = isTeacher;
+	}
+
 	public boolean isEnabled() {
 		return enabled;
 	}
@@ -92,6 +101,5 @@ public class UserEntity {
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
-	
-	
+
 }

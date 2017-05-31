@@ -24,7 +24,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public User getUserByUsername(String neptuncode) throws InvalidUserException {
+	public User getUserByNeptunCode(String neptuncode) throws InvalidUserException {
 		UserEntity userEntity = this.entityManager.find(UserEntity.class, neptuncode);
 		User user = null;
 
@@ -54,6 +54,8 @@ public class UserDaoImpl implements UserDao {
 		}
 
 	}
+
+	
 
 	
 
