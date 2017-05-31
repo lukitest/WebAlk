@@ -29,11 +29,11 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User getUserByUsername(String neptuncode) throws UserNotExistsException {
+	public User getUserByNeptunCode(String neptuncode) throws UserNotExistsException {
 		User user = null;
 
 		try {
-			user = this.userDao.getUserByUsername(neptuncode);
+			user = this.userDao.getUserByNeptunCode(neptuncode);
 		} catch (InvalidUserException e) {
 			throw new UserNotExistsException();
 		}

@@ -6,8 +6,8 @@ import uni.iit.miskolc.lukacs6.ApplicationRegistry.Service.exception.UserNotExis
 public interface UserService {
 
 	User getUserByNeptunCode(String neptuncode) throws UserNotExistsException;
-	void modifyUser(String neptuncode, String firstname, String lastname, int age, String email) throws UserNotExistsException;
 
-	
-	
+	void modifyUser(String neptuncode, String firstname, String lastname, int age, String email)
+			throws UserNotExistsException;
+
 }
