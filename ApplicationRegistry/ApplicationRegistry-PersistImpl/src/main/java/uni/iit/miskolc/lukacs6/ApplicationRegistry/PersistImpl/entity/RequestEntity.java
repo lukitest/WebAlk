@@ -19,9 +19,17 @@ public class RequestEntity {
 	@Column(name = "User")
 	private String user;
 	@Id
-	@Column(name = "Reviewer")
-	private String reviewer;
-	
+	@Column(name = "Status")
+	private String status;
+	@Id
+	@Column(name = "Comment")
+	private String comment;
+	@Id
+	@Column(name = "Template")
+	private TemplateEntity template;
+	@Id
+	@Column(name = "Verdict")
+	private String verdict;
 	
 	public int getId() {
 		return id;
@@ -41,11 +49,11 @@ public class RequestEntity {
 	public void setUser(String user) {
 		this.user = user;
 	}
-	public String getReviewer() {
-		return reviewer;
+	public String getStatus() {
+		return status;
 	}
-	public void setReviewer(String reviewer) {
-		this.reviewer = reviewer;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	
 }
