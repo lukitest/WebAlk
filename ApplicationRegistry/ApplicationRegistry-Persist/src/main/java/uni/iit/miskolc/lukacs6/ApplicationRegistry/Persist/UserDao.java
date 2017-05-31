@@ -6,7 +6,7 @@ import uni.iit.miskolc.lukacs6.ApplicationRegistry.Model.User;
 
 public interface UserDao {
 
-	User getUserByUsername(String neptuncode) throws InvalidUserException;
+	User getUserByNeptunCode(String neptuncode) throws InvalidUserException;
 	
 	void modifyUser(String neptuncode, String firstname, String lastname, int age, String email) throws InvalidUserException;
 	

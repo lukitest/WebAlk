@@ -10,6 +10,7 @@ public class Request {
 	private String reviewer;
 	private String comment;
 	private Template template;
+	private String verdict ;
 	
 	
 	public Request() {
@@ -65,6 +66,15 @@ public class Request {
 		this.template = template;
 	}
 
+	public String getVerdict() {
+		return verdict;
+	}
+
+	public void setVerdict(String verdict) {
+		this.verdict = verdict;
+	}
+
 	
 
+	
 }
