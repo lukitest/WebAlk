@@ -8,18 +8,7 @@
 	</parent>
 	<artifactId>ApplicationRegistry-Controller</artifactId>
 	<packaging>war</packaging>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	
 	<dependencies>
 		<dependency>
 			<groupId>uni.iit.miskolc.lukacs6</groupId>
@@ -30,6 +19,11 @@
 			<groupId>uni.iit.miskolc.lukacs6</groupId>
 			<artifactId>ApplicationRegistry-ServiceImpl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -53,4 +47,16 @@
 			<version>2.8.8.1</version>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
