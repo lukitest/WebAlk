@@ -1,5 +1,7 @@
 package uni.iit.miskolc.lukacs6.ApplicationRegistry.Controller.configuration;
 
+
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class SpringMvcInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
