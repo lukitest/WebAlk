@@ -12,7 +12,7 @@ import uni.iit.miskolc.lukacs6.ApplicationRegistry.ServiceImpl.configuration.Ser
 
 @EnableWebMvc
 @Configuration
-@ComponentScan("hu.iit.uni.miskolc.RequestRegistry.controller")
+@ComponentScan("uni.iit.miskolc.lukacs6.ApplicationRegistry.Controller.configuration")
 @Import({SecurityConfiguration.class, DaoApplicationContextConfig.class, ServiceApplicationContextConfig.class})
 public class WebAppConfiguration extends WebMvcConfigurerAdapter {
 
