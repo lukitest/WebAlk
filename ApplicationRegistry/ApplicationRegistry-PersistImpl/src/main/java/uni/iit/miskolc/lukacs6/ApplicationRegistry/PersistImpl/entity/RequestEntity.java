@@ -6,8 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import uni.iit.miskolc.lukacs6.ApplicationRegistry.Model.User;
-
 @Entity(name = "Request")
 @Table(name = "Requests")
 public class RequestEntity {
@@ -32,49 +30,61 @@ public class RequestEntity {
 	@Id
 	@Column(name = "Verdict")
 	private String verdict;
+
 	public String getComment() {
 		return comment;
 	}
+
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+
 	public TemplateEntity getTemplate() {
 		return template;
 	}
+
 	public void setTemplate(TemplateEntity template) {
 		this.template = template;
 	}
+
 	public String getVerdict() {
 		return verdict;
 	}
+
 	public void setVerdict(String verdict) {
 		this.verdict = verdict;
 	}
-	
-	
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public Date getDate() {
 		return date;
 	}
+
 	public void setDate(Date date) {
 		this.date = date;
 	}
+
 	public UserEntity getUser() {
 		return user;
 	}
+
 	public void setUser(UserEntity user) {
 		this.user = user;
 	}
+
 	public String getStatus() {
 		return status;
 	}
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	
+
 }

@@ -17,8 +17,8 @@ public final class TemplateEntityConverter {
 
 		return template;
 	}
-	public static Template convertTemplateEntityToEntity(TemplateEntity templateEntity) {
-		Template template = new Template();
+	public static Template convertTemplateToEntity(Template template) {
+		TemplateEntity templateEntity = new TemplateEntity();
 		
 		templateEntity.setTitle(template.getTitle());
 		templateEntity.setValue(template.getValue());
