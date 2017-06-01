@@ -27,10 +27,10 @@ public class RequestDaoImpl implements RequestDao {
 	
 	@Override
 	public void submitRequest(Request request) throws InvalidRequestException {
-RequestEntity requestEntity = new RequestEntity();
+		RequestEntity requestEntity = new RequestEntity();
 		
 		requestEntity.setUser(UserEntityConverter.convertUserToEntity(request.getUser()));
-		//requestEntity.setTemplate(TemplateEntityConverter.convertTemplateToEntity(request.getTemplate());
+		requestEntity.setTemplate(TemplateEntityConverter.convertTemplateToEntity(request.getTemplate()));
 		
 		requestEntity.setComment(request.getComment());
 		requestEntity.setStatus(request.getStatus());
