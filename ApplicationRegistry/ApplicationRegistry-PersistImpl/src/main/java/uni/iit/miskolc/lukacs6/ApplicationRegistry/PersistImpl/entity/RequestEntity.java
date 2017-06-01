@@ -19,7 +19,7 @@ public class RequestEntity {
 	private Date date;
 	@Id
 	@Column(name = "User")
-	private User user;
+	private UserEntity user;
 	@Id
 	@Column(name = "Status")
 	private String status;
@@ -64,10 +64,10 @@ public class RequestEntity {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public User getUser() {
+	public UserEntity getUser() {
 		return user;
 	}
-	public void setUser(User user) {
+	public void setUser(UserEntity user) {
 		this.user = user;
 	}
 	public String getStatus() {

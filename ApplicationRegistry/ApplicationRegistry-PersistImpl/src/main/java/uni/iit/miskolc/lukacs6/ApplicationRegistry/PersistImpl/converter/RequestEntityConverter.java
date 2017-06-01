@@ -13,7 +13,7 @@ public class RequestEntityConverter {
 		Request request = new Request();
 		request.setId(requestEntity.getId());
 		request.setDate(requestEntity.getDate());
-		//request.setUser(UserEntityConverter.convertUserEntityToModel(requestEntity.getUser());
+		request.setUser(UserEntityConverter.convertUserEntityToModel(requestEntity.getUser()));
 		request.setStatus(requestEntity.getStatus());
 		request.setComment(requestEntity.getComment());
 		request.setTemplate(TemplateEntityConverter.convertTemplateEntityToModel(requestEntity.getTemplate()));
