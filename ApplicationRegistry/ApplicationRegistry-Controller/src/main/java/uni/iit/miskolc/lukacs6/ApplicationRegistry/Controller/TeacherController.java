@@ -14,20 +14,17 @@ import uni.iit.miskolc.lukacs6.ApplicationRegistry.Service.UserService;
 import uni.iit.miskolc.lukacs6.ApplicationRegistry.Service.exception.UserNotExistsException;
 
 @RestController
-public class UserController {
+public class TeacherController {
 
 	@Autowired
 	private UserService userService;
 
-	public UserController() {
+	public TeacherController() {
 
 	}
 
-
-
 	private String getNeptuncode() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-
 		return auth.getName();
 	}
 
