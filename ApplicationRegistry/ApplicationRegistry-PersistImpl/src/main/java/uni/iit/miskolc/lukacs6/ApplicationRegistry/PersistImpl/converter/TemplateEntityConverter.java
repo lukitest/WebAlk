@@ -17,13 +17,13 @@ public final class TemplateEntityConverter {
 
 		return template;
 	}
-	public static Template convertTemplateToEntity(Template template) {
+	public static TemplateEntity convertTemplateToEntity(Template template) {
 		TemplateEntity templateEntity = new TemplateEntity();
 		
 		templateEntity.setTitle(template.getTitle());
 		templateEntity.setValue(template.getValue());
 		templateEntity.setRecipient(template.getRecipient());
 
-		return template;
+		return templateEntity;
 	}
 }
