@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import uni.iit.miskolc.lukacs6.ApplicationRegistry.Controller.model.ErrorResponse;
 
 @ControllerAdvice
 public class ExceptionHandlerController {
