@@ -1,5 +1,7 @@
 package uni.iit.miskolc.lukacs6.ApplicationRegistry.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -10,10 +12,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import uni.iit.miskolc.lukacs6.ApplicationRegistry.Controller.model.UserDetailsRequest;
+import uni.iit.miskolc.lukacs6.ApplicationRegistry.Model.Request;
 import uni.iit.miskolc.lukacs6.ApplicationRegistry.Model.User;
 import uni.iit.miskolc.lukacs6.ApplicationRegistry.Persist.exception.InvalidRequestException;
 import uni.iit.miskolc.lukacs6.ApplicationRegistry.Persist.exception.InvalidTemplateException;
 import uni.iit.miskolc.lukacs6.ApplicationRegistry.Persist.exception.InvalidUserException;
+import uni.iit.miskolc.lukacs6.ApplicationRegistry.Service.RequestService;
 import uni.iit.miskolc.lukacs6.ApplicationRegistry.Service.UserService;
 import uni.iit.miskolc.lukacs6.ApplicationRegistry.Service.exception.UserNotExistsException;
 
@@ -23,7 +27,7 @@ public class StudentController {
 	@Autowired
 	private UserService userService;
 	@Autowired
-	private Object requestService;
+	private RequestService requestService;
 
 	public StudentController() {
 
@@ -40,16 +44,16 @@ public class StudentController {
 		this.userService.modifyUser(neptuncode, userDetailsRequest.getFirstname(), userDetailsRequest.getLastname(),
 				userDetailsRequest.getAge(), userDetailsRequest.getEmail());
 	}
-	@RequestMapping(value = "/submit/{templateName}", method = RequestMethod.POST)
-	public void submitRequest(@PathVariable("title") String title) throws InvalidRequestException, InvalidUserException, InvalidTemplateException {
+	@RequestMapping(value = "/submit/{neptuncode}/{title}", method = RequestMethod.POST)
+	public void submitRequest(@PathVariable("title") String title) throws InvalidRequestException, InvalidUserException, InvalidTemplateException, UserNotExistsException {
 		String neptuncode = getNeptuncode();
 		this.requestService.submitRequest(neptuncode, title);
 	}
 	
-	/*@RequestMapping(value = "/myRequests", method = RequestMethod.GET)
-	public List<Request> listMyRequests() throws InvalidUserException {
+	@RequestMapping(value = "/myRequests", method = RequestMethod.GET)
+	public List<Request> listMyRequests() throws InvalidUserException, UserNotExistsException {
 		String neptuncode = getNeptuncode();
 		return this.requestService.listRequestByUser(neptuncode);
-	}*/
+	}
 
 }
