@@ -1,7 +1,5 @@
 package uni.iit.miskolc.lukacs6.ApplicationRegistry.PersistImpl;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
