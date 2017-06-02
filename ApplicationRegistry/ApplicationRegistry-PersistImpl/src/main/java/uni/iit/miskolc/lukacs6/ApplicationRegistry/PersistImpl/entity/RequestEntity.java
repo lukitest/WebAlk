@@ -3,7 +3,11 @@ package uni.iit.miskolc.lukacs6.ApplicationRegistry.PersistImpl.entity;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity(name = "Request")
@@ -15,8 +19,8 @@ public class RequestEntity {
 	@Id
 	@Column(name = "Date")
 	private Date date;
-	@Id
-	@Column(name = "User")
+	@OneToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "UserID")
 	private UserEntity user;
 	@Id
 	@Column(name = "Status")
@@ -24,8 +28,8 @@ public class RequestEntity {
 	@Id
 	@Column(name = "Comment")
 	private String comment;
-	@Id
-	@Column(name = "Template")
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "TemplateTitle")
 	private TemplateEntity template;
 	@Id
 	@Column(name = "Verdict")
